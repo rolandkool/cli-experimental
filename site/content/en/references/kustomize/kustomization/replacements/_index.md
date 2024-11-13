@@ -70,12 +70,16 @@ replacements:
       kind: string
       name: string
       namespace: string
+      labelSelector: "key=value"
+      annotationSelector: "key=value"
     reject:
     - group: string
       version: string
       kind: string
       name: string
       namespace: string
+      labelSelector: "key=value"
+      annotationSelector: "key=value"
     fieldPaths:
     - string
     options:
@@ -95,6 +99,8 @@ replacements:
 |`kind` | |The kind of the referent
 |`name` | |The name of the referent
 |`namespace`|  |The namespace of the referent
+|`labelSelector`|  |Select a referent based on labels
+|`annotationSelector`|  |Select a referent based on annotations
 |`select` |:heavy_check_mark: |Include objects that match this
 |`reject`| |Exclude objects that match this
 |`fieldPath`|  |The structured path to the source value | `metadata.name`
